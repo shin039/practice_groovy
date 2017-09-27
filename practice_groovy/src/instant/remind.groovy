@@ -89,8 +89,9 @@ ${task_list}
 // メール送信ロジック
 // ----------------------------------------------------------------------------
 def send_mail(to_addr, subject, message){
-  @Grab(group='javax.activation', module='activation', version='1.1.1')
-  @Grab(group='javax.mail'      , module='mail'      , version='1.4.7')
+  // XXX Eclipseプラグインだとエラーになる。
+  //@Grab(group='javax.activation', module='activation', version='1.1.1')
+  //@Grab(group='javax.mail'      , module='mail'      , version='1.4.7')
   @GrabConfig(systemClassLoader=true)
 
 
